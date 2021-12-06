@@ -1,0 +1,34 @@
+@import "utils";
+.leftSidebar {
+  padding: 30px;
+  border-right: 1px solid $grey;
+}
+
+.newConversation {
+  display: grid;
+  place-items: center;
+  button {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    background-color: $white;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px rgba($color: $grey, $alpha: 0.8);
+    span {
+      display: grid;
+      place-items: center;
+      //   padding: 12px 15px;
+      color: $black;
+      font-family: "Poppins";
+      &:first-child {
+        border-right: 1px solid $grey;
+        color: $primary;
+        padding: 10px;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

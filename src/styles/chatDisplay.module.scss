@@ -3,13 +3,14 @@
 .chatDisplay {
   border-right: 1px solid $grey;
   display: grid;
-  grid-template-rows: 150px 70vh 150px;
+  grid-template-rows: 100px 70vh 100px;
 }
 .topBar {
   padding: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0px 4px 5px rgba($color: $grey, $alpha: 1);
   .user {
     display: flex;
     align-items: center;

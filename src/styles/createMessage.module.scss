@@ -1,0 +1,59 @@
+@import "utils";
+.createMessage {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  background-color: $background;
+  .createGrid {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    box-shadow: 1px 3px 10px rgba($color: $primary, $alpha: 0.2);
+    .attachBtn {
+      background-color: rgba($color: $primary, $alpha: 0.2);
+      display: grid;
+      place-items: center;
+      border-radius: 5px;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+
+      svg {
+        color: $primary;
+        font-size: 1.5rem;
+      }
+    }
+
+    .messageInput {
+      flex: 1;
+      padding: 0 5px;
+      //   margin: 0 10px;
+      input {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10px;
+        // border: none;
+        border: none;
+        font-size: 1.2rem;
+        font-family: "Lato";
+        outline: none;
+      }
+    }
+    .sendBtn {
+      background-color: $primary;
+      //   padding: 10px;
+      display: grid;
+      place-items: center;
+      border-radius: 5px;
+      width: 40px;
+      height: 40px;
+
+      svg {
+        color: $white;
+      }
+    }
+  }
+}

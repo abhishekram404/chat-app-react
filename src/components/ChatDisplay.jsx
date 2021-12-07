@@ -3,6 +3,7 @@ import { FiPlus } from "react-icons/fi";
 import { MdSettings } from "react-icons/md";
 import styles from "../styles/chatDisplay.module.scss";
 import Conversation from "./Conversation";
+import CreateMessage from "./CreateMessage";
 export default function ChatDisplay() {
   return (
     <div className={styles.chatDisplay}>
@@ -35,6 +36,7 @@ export default function ChatDisplay() {
         </div>
       </div>
       <Conversation />
+      <CreateMessage />
     </div>
   );
 }

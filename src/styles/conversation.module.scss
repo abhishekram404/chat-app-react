@@ -1,0 +1,90 @@
+@import "utils";
+.conversation {
+  //   flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+  height: 100%;
+  //   height: 700px;
+  overflow-y: scroll;
+
+  .sent {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 2px 0;
+
+    .sentAvatar {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .sentContent {
+      padding: 15px;
+      margin-right: 10px;
+      background-color: $primary;
+      color: $white;
+      border-radius: 20px 20px 0 20px;
+      max-width: 400px;
+
+      .sentMessage {
+        font-family: "Roboto";
+        line-height: 1.6rem;
+      }
+      .sentDetails {
+        display: flex;
+        justify-content: space-between;
+        color: rgba($color: $grey, $alpha: 0.6);
+        font-family: "Lato";
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .received {
+    align-self: flex-start;
+    display: flex;
+    margin: 2px 0;
+    .receivedAvatar {
+      width: 30px;
+      height: 30px;
+      //   overflow: hidden;
+      position: relative;
+      img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+      }
+      i {
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border: 1px solid $white;
+        width: 5px;
+        height: 5px;
+        background-color: $green;
+      }
+    }
+    .receivedContent {
+      padding: 15px;
+      margin-left: 10px;
+      background-color: $white;
+      border-radius: 20px 20px 20px 0;
+      max-width: 400px;
+      line-height: 1.6rem;
+    }
+    .receivedDetails {
+      display: flex;
+      //   margin-top: 10px;
+      color: rgba($color: $black, $alpha: 0.6);
+      font-family: "Lato";
+      font-size: 0.8rem;
+    }
+  }
+}

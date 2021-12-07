@@ -20,7 +20,7 @@ export default function ChatDisplay() {
           <span>Abhishek Ram</span>
         </div>
         <div className={styles.members}>
-          <div className={styles.membersList}>
+          {/* <div className={styles.membersList}>
             Members: &nbsp; &nbsp;
             <div style={{ zIndex: 100000 }} className={styles.addMember}>
               <FiPlus />
@@ -29,7 +29,7 @@ export default function ChatDisplay() {
               <img src="https://i.pravatar.cc/45" alt="" />
             </div>
             <div>&bull;&bull;&bull;</div>
-          </div>
+          </div> */}
           <div className={styles.settings}>
             <MdSettings />
           </div>

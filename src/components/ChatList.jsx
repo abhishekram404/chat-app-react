@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "../styles/chatList.module.scss";
 import { HiDotsHorizontal } from "react-icons/hi";
-import { BiSearch } from "react-icons/bi";
+import { BiSad, BiSearch } from "react-icons/bi";
+
 export default function ChatList() {
   return (
     <div>
@@ -16,7 +17,12 @@ export default function ChatList() {
       </div>
 
       <div className={styles.chatList}>
-        <ChatListItem />
+        <div className={styles.noChats}>
+          <BiSad />
+          <br />
+          No chats yet
+        </div>
+        {/* <ChatListItem />
         <ChatListItem active={true} />
         <ChatListItem />
         <ChatListItem />
@@ -35,7 +41,7 @@ export default function ChatList() {
         <ChatListItem />
         <ChatListItem />
         <ChatListItem />
-        <ChatListItem />
+        <ChatListItem /> */}
       </div>
     </div>
   );

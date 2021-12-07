@@ -8,6 +8,14 @@
   margin-top: 20px;
   padding: 10px 0;
   overflow: scroll;
+  .noChats {
+    text-align: center;
+    color: $lightGrey;
+    font-size: 1.3rem;
+    svg {
+      font-size: 4rem;
+    }
+  }
 }
 
 .chatListItem {

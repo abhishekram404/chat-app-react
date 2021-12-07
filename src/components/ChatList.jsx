@@ -17,10 +17,11 @@ export default function ChatList() {
 
       <div className={styles.chatList}>
         <ChatListItem />
+        <ChatListItem active={true} />
         <ChatListItem />
         <ChatListItem />
         <ChatListItem />
-        <ChatListItem />
+        <ChatListItem active={true} />
         <ChatListItem />
         <ChatListItem />
         <ChatListItem />
@@ -40,7 +41,7 @@ export default function ChatList() {
   );
 }
 
-const ChatListItem = () => {
+const ChatListItem = ({ active }) => {
   return (
     <div className={styles.chatListItem}>
       <div>
@@ -49,11 +50,11 @@ const ChatListItem = () => {
         "
           alt="avatar"
         />
-        <i></i>
+        {active && <i></i>}
       </div>
       <div>
         <b>Tim Hover</b>
-        <span>32 mins ago</span>
+        <span>{active ? "Online" : "32 mins ago"}</span>
       </div>
     </div>
   );

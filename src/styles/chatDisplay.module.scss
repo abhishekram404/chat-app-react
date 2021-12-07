@@ -1,0 +1,121 @@
+@import "utils";
+
+.chatDisplay {
+  border-right: 1px solid $grey;
+}
+.topBar {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .user {
+    display: flex;
+    align-items: center;
+    div {
+      margin-right: 20px;
+      position: relative;
+      img {
+        border-radius: 50%;
+      }
+      i {
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border: 3px solid $white;
+        width: 8px;
+        height: 8px;
+        background-color: $green;
+      }
+    }
+    span {
+      font-family: "Roboto", sans-serif;
+      font-size: 1.1rem;
+    }
+  }
+  .members {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+
+    .membersList {
+      padding-right: 20px;
+      //   width: 40px;
+      //   height: 40px;
+      //   border-radius: 50%;
+      //   border: 2px solid $primary;
+      //   text-align: center;
+
+      //   //   position: relative;
+      display: flex;
+      align-items: center;
+      border-right: 1px solid rgba($color: $grey, $alpha: 1);
+      div {
+        box-sizing: border-box;
+        display: grid;
+        place-items: center;
+        margin-right: 1px;
+        width: 35px;
+        height: 35px;
+        // position: relative;
+
+        img {
+          border-radius: 50%;
+          width: 100%;
+          height: 100%;
+        }
+        // &:nth-child(1) {
+        //   left: 0;
+        // }
+        // &:nth-child(2) {
+        //   left: -10px;
+        // }
+        // &:nth-child(3) {
+        //   left: -20px;
+        // }
+        // &:nth-child(4) {
+        //   left: -40px;
+        // }
+        // &:nth-child(5) {
+        //   left: -80px;
+        // }
+
+        &:last-child {
+          // left: -80px;
+          border: 2px solid $lightGrey;
+          color: $lightGrey;
+          border-radius: 50%;
+          background-color: $background;
+        }
+      }
+
+      //     img {
+      //       border-radius: 50%;
+      //       width: 40px;+
+      //       height: 40px;
+      //     }
+      //   }
+      .addMember {
+        // position: absolute;
+        // width: 40px;
+        // height: 40px;
+        border-radius: 50%;
+        border: 2px solid $primary;
+        display: grid;
+        place-items: center;
+        color: $primary;
+        background-color: $background;
+      }
+    }
+    .settings {
+      display: grid;
+      place-items: center;
+      padding-left: 20px;
+      svg {
+        color: $black;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

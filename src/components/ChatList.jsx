@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/chatList.module.scss";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { BiSad, BiSearch } from "react-icons/bi";
+import { BsGlobe } from "react-icons/bs";
 
 export default function ChatList() {
   return (
@@ -17,11 +18,12 @@ export default function ChatList() {
       </div>
 
       <div className={styles.chatList}>
-        <div className={styles.noChats}>
+        <ChatListItem superChat={true} active={true} />
+        {/* <div className={styles.noChats}>
           <BiSad />
           <br />
           No chats yet
-        </div>
+        </div> */}
         {/* <ChatListItem />
         <ChatListItem active={true} />
         <ChatListItem />
@@ -47,15 +49,19 @@ export default function ChatList() {
   );
 }
 
-const ChatListItem = ({ active }) => {
+const ChatListItem = ({ active, superChat }) => {
   return (
     <div className={styles.chatListItem}>
       <div>
-        <img
-          src="https://i.pravatar.cc/45
+        {superChat ? (
+          <BsGlobe />
+        ) : (
+          <img
+            src="https://i.pravatar.cc/45
         "
-          alt="avatar"
-        />
+            alt="avatar"
+          />
+        )}
         {active && <i></i>}
       </div>
       <div>

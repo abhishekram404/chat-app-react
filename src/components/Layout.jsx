@@ -6,9 +6,11 @@ import styles from "../styles/layout.module.scss";
 export default function Layout() {
   return (
     <div className={styles.layout}>
-      <LeftSidebar />
-      <ChatDisplay />
-      <RightSidebar />
+      <>
+        <LeftSidebar />
+        <ChatDisplay />
+        <RightSidebar />
+      </>
     </div>
   );
 }

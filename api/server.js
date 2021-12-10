@@ -16,7 +16,11 @@ const io = new Server(httpServer, {
   },
 });
 
+var onlineUsers = [];
+
 io.on("connection", (socket) => {
+  onlineUsers = [...onlineUsers, { id: socket.id, name: null }];
+  socket.emit("new_user", onlineUsers);
   socket.on("message", (text) => {
     console.log(text);
   });

@@ -3,10 +3,9 @@
   //   flex: 1;
   box-sizing: border-box;
   display: flex;
+  height: 100%;
   flex-direction: column;
   padding: 20px 30px 5px 30px;
-  height: 100%;
-  //   height: 700px;
   overflow-y: scroll;
 
   .sent {
@@ -90,6 +89,19 @@
       color: rgba($color: $black, $alpha: 0.6);
       font-family: "Lato";
       font-size: 0.8rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .conversation {
+    padding: 20px 20px 5px 20px;
+    .sent,
+    .received {
+      .sentContent,
+      .receivedContent {
+        padding: 12px;
+      }
     }
   }
 }

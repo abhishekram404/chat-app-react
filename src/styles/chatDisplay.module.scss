@@ -3,10 +3,11 @@
 .chatDisplay {
   border-right: 1px solid $grey;
   display: grid;
-  grid-template-rows: 100px 70vh 100px;
+  grid-template-rows: 80px 1fr 100px;
+  overflow: hidden;
 }
 .topBar {
-  padding: 30px;
+  padding: 10px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,5 +89,11 @@
         font-size: 1.5rem;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .chatDisplay {
+    grid-template-rows: 70px 1fr 80px;
   }
 }

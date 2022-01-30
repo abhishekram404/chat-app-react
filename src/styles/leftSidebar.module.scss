@@ -1,12 +1,16 @@
 @import "utils";
 .leftSidebar {
+  height: 100%;
   padding: 30px;
   border-right: 1px solid $grey;
+  overflow: hidden;
+  display: grid;
 }
 
 .newConversation {
   display: grid;
   place-items: center;
+  margin-bottom: 20px;
   button {
     width: 100%;
     display: grid;
@@ -14,20 +18,40 @@
     align-items: center;
     background-color: $white;
     border: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     border-radius: 5px;
     box-shadow: 1px 1px 8px rgba($color: $grey, $alpha: 0.8);
     span {
       display: grid;
       place-items: center;
-      //   padding: 12px 15px;
       color: $black;
       font-family: "Poppins";
+      font-size: 1rem;
       &:first-child {
         border-right: 1px solid $grey;
         color: $primary;
         padding: 10px;
         font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .leftSidebar {
+    padding: 20px;
+  }
+
+  .newConversation {
+    button {
+      grid-template-columns: 40px 1fr;
+
+      span {
+        font-size: 0.9rem;
+        &:first-child {
+          // padding: 7px;
+          font-size: 1.3rem;
+        }
       }
     }
   }

@@ -57,3 +57,12 @@
     }
   }
 }
+
+@media only screen and (max-width: 1400px) {
+  .createMessage {
+    padding: 6px 20px;
+    .createGrid {
+      padding: 8px;
+    }
+  }
+}

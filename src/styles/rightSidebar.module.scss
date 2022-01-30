@@ -22,9 +22,10 @@
     }
     h4 {
       font-family: "Roboto", sans-serif;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       color: $black;
       margin: 20px 0 5px 0;
+      text-align: center;
     }
     p {
       font-family: "Lato", sans-serif;
@@ -48,5 +49,20 @@
     svg {
       font-size: 1.5rem;
     }
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .rightSidebar {
+    padding: 20px;
+    > div {
+      padding: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .rightSidebar {
+    display: none;
   }
 }

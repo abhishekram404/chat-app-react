@@ -1,15 +1,22 @@
 import React, { useState } from "react";
 import styles from "../styles/join.module.scss";
+import { useDispatch } from "react-redux";
+import { joinChat } from "../redux/actions/joinActions";
 export default function Join() {
+  const dispatch = useDispatch();
   const [name, setName] = useState("");
   const handleChange = (e) => {
     setName(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(joinChat(name));
   };
   return (
     <div className={styles.join}>
       <div className={styles.joinForm}>
         <h4>Join the chatroom</h4>
-        <form>
+        <form onSubmit={handleSubmit}>
           {/* <label htmlFor="name">Your name</label> */}
           <input
             type="text"

@@ -19,11 +19,26 @@ const io = new Server(httpServer, {
 var onlineUsers = [];
 
 io.on("connection", (socket) => {
-  onlineUsers = [...onlineUsers, { id: socket.id, name: null }];
-  socket.emit("new_user", onlineUsers);
+  onlineUsers = [
+    ...onlineUsers,
+    { id: socket.id, name: socket.handshake.query.name },
+  ];
+  console.log(onlineUsers);
+  // console.log(socket.handshake.query.name, socket.id);
+  // socket.broadcast.emit("online_users", onlineUsers);
   socket.on("message", (text) => {
     console.log(text);
+    io.emit("message", text);
   });
+
+  // socket.on("get_online_users", () => {
+  //   socket.emit("online_users", onlineUsers);
+  // });
+
+  // socket.on("disconnect", () => {
+  //   console.log(onlineUsers);
+  //   onlineUsers = onlineUsers.filter((user) => user.id == socket.id);
+  // });
 });
 
 httpServer.listen(port);

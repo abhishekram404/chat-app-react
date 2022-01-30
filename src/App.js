@@ -1,20 +1,34 @@
-import { useEffect, useState } from "react";
 import "./styles/App.scss";
 import Layout from "./components/Layout.jsx";
-import io from "socket.io-client";
+import { useSelector, useDispatch } from "react-redux";
 import Join from "./components/Join";
 function App() {
-  // socket.emit("message", "Hello server");
-  const [joined, setJoined] = useState(false);
+  const dispatch = useDispatch();
+  const { socket, isJoined } = useSelector((state) => state.common);
 
-  useEffect(() => {
-    const socket = io.connect("localhost:4000");
+  socket &&
     socket.on("connect", () => {
-      console.log(socket.id);
+      dispatch({
+        type: "JOINED",
+      });
     });
-  }, []);
-  // console.log(socket);
-  return <div className="App">{joined ? <Layout /> : <Join />}</div>;
+
+  // socket &&
+  //   socket.on("online_users", (onlineUsers) => {
+  //     console.log(onlineUsers);
+  //     onlineUsers = onlineUsers.filter((user) => user.id === socket.id);
+  //     dispatch({
+  //       type: "ONLINE_USERS",
+  //       users: onlineUsers,
+  //     });
+  //   });
+
+  socket &&
+    socket.on("message", (text) => {
+      console.log("message");
+    });
+
+  return <div className="App">{isJoined ? <Layout /> : <Join />}</div>;
 }
 
 export default App;

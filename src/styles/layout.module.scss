@@ -1,12 +1,15 @@
 @import "utils";
 .layout {
+  max-width: 1200px;
   background-color: $background;
   border-radius: 15px;
   box-shadow: 1px 1px 5px rgba($color: $grey, $alpha: 1);
   width: 85%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 0.4fr 1.2fr 0.4fr;
+  overflow: hidden;
+  // grid-template-columns: 0.4fr 1.2fr 0.4fr;
+  grid-template-columns: 0.4fr 1.2fr;
   height: 100%;
   // justify-content: stretch;
 }

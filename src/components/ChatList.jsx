@@ -49,11 +49,11 @@ const ChatListItem = ({ active }) => {
           src="https://i.pravatar.cc/45
         "
           alt="avatar"
+          className={active && styles.active}
         />
-        {active && <i></i>}
       </div>
       <div>
-        <b>Tim Hover</b>
+        <b>World chat</b>
         <span>{active ? "Online" : "32 mins ago"}</span>
       </div>
     </div>
